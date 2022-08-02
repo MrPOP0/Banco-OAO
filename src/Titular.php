@@ -11,16 +11,21 @@ class Titular
         $this->nome = $nome;
         $this->cpf = $cpf;
     }
-    
-    public function getDados(): string
-    {
-        $dados = 'Titular: ' . $this->nome . PHP_EOL . 'CPF: ' . $this->cpf->getCpf() . PHP_EOL;
-        return $dados;
-    }
 
     public function getNome(): string
     {
         return $this->nome;
+    }
+
+    public function CPF()
+	{
+		return $this->cpf;
+	}
+
+    public function getDados(): string
+    {
+        $dados = 'Titular: ' . $this->nome . PHP_EOL . 'CPF: ' . $this->cpf->getCpf() . PHP_EOL;
+        return $dados;
     }
 
     private function validaNome($nome)

@@ -31,6 +31,6 @@ echo $contaY->getSaldo();
 echo $contaX->getSaldo();
 
 echo Conta::getNumeroDeContas();
-*/
-//echo $contaX->getSaldo();
+
 echo $contaX->Titular()->getDados();
+*/

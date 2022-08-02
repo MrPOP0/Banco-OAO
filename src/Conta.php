@@ -56,11 +56,6 @@ class Conta
 		return $this->titular;
 	}
 
-	public function CPF()
-	{
-		return $this->cpf;
-	}
-
 	public function getSaldo(): string
 	{
 		$mensagem = $this->titular->nome . ', seu saldo é de ' . $this->saldo . PHP_EOL;
