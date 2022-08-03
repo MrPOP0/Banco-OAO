@@ -1,5 +1,7 @@
 <?php
 
+namespace PPZ\Bank\Modelo;
+
 class Funcionario extends Pessoa
 {
     private string $cargo;

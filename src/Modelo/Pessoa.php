@@ -1,5 +1,7 @@
 <?php
 
+namespace PPZ\Bank\Modelo;
+
 class Pessoa
 {
     protected string $nome;

@@ -1,6 +1,6 @@
 <?php
 
-
+namespace PPZ\Bank\Modelo\Conta;
 
 class Conta
 {

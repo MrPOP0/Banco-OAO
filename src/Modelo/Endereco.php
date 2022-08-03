@@ -1,5 +1,7 @@
 <?php
 
+namespace PPZ\Bank\Modelo;
+
 class Endereco
 {
     private string $cidade;

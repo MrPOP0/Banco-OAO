@@ -1,11 +1,14 @@
 <?php
 // Criação de contas e execução de operações como saque e depositos e etc...
 
-require 'src/Conta.php';
-require 'src/Pessoa.php';
-require 'src/Titular.php';
-require 'src/Cpf.php';
-require 'src/Endereco.php';
+require_once 'src/autoload.php';
+
+use PPZ\Bank\Modelo\Conta\Conta;
+use PPZ\Bank\Modelo\Conta\Titular;
+use PPZ\Bank\Modelo\CPF;
+use PPZ\Bank\Modelo\Endereco;
+use PPZ\Bank\Modelo\Funcionario;
+use PPZ\Bank\Modelo\Pessoa;
 
 //Criação de contas
 
@@ -17,7 +20,7 @@ $contaY = new Conta($pessoaY);
 
 
 //Operações
-/*
+
 echo Conta::getNumeroDeContas();
 
 $contaX->deposita(200);
@@ -35,4 +38,3 @@ echo $contaY->getSaldo();
 echo $contaX->getSaldo();
 
 echo $contaX->Titular()->getDados();
-*/

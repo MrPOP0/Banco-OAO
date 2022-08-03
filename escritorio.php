@@ -1,6 +1,8 @@
 <?php
 // Criação de funcionários 
 
+require_once 'src/autoload.php';
+
 require 'src/CPF.php';
 require 'src/Pessoa.php';
 require 'src/Funcionario.php';

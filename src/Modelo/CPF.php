@@ -1,5 +1,7 @@
 <?php
 
+namespace PPZ\Bank\Modelo;
+
 class CPF
 {
     private string $cpf;
