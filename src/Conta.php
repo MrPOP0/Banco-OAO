@@ -51,21 +51,21 @@ class Conta
 		}
 	}
 
-	public function Titular()
+	public function Titular(): Titular
 	{
 		return $this->titular;
 	}
 
 	public function getSaldo(): string
 	{
-		$mensagem = $this->titular->nome . ', seu saldo é de ' . $this->saldo . PHP_EOL;
+		$mensagem = $this->titular->getNome() . ', seu saldo é de ' . $this->saldo . PHP_EOL;
 		
 		return $mensagem;
 	}
 
-	public static function getNumeroDeContas(): int
+	public static function getNumeroDeContas(): string
 	{
-		return self::$numeroDeContas;
+		return 'Numero de contas abertas: ' . self::$numeroDeContas . PHP_EOL;
 	}
 
 }
