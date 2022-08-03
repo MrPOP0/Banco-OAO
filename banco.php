@@ -2,6 +2,7 @@
 // Criação de contas e execução de operações como saque e depositos e etc...
 
 require 'src/Conta.php';
+require 'src/Pessoa.php';
 require 'src/Titular.php';
 require 'src/Cpf.php';
 require 'src/Endereco.php';

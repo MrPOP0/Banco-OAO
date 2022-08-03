@@ -1,9 +1,7 @@
 <?php
 
-class Titular
+class Titular extends Pessoa
 {
-    private string $nome;
-    private CPF $cpf;
     private Endereco $endereco;
 
     public function __construct(string $nome, CPF $cpf, Endereco $endereco)
@@ -33,15 +31,6 @@ class Titular
     {
         $dados = "Dados: Titular($this->nome)," . PHP_EOL . 'CPF(' . $this->cpf->getCpf() . '),' . PHP_EOL . 'Endereço(' . $this->endereco->getEndereco() . ')' . PHP_EOL;
         return $dados;
-    }
-
-    private function validaNome($nome)
-    {
-        if (strlen(trim($nome)) > 5) {
-            $this->nome = $nome;
-        }else{
-            exit;
-        }
     }
 
 }
