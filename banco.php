@@ -17,7 +17,7 @@ $contaY = new Conta($pessoaY);
 
 
 //Operações
-
+/*
 echo Conta::getNumeroDeContas();
 
 $contaX->deposita(200);
@@ -35,3 +35,4 @@ echo $contaY->getSaldo();
 echo $contaX->getSaldo();
 
 echo $contaX->Titular()->getDados();
+*/

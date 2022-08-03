@@ -2,8 +2,8 @@
 
 class Pessoa
 {
-    public string $nome;
-    public CPF $cpf;
+    protected string $nome;
+    private CPF $cpf;
 
     public function __construct(string $nome, CPF $cpf)
     {
@@ -21,7 +21,7 @@ class Pessoa
 		return $this->cpf;
 	}
 
-    public function validaNome($nome)
+    protected function validaNome($nome)
     {
         if (strlen(trim($nome)) > 5) {
             $this->nome = $nome;
