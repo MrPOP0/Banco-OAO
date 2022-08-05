@@ -2,10 +2,10 @@
 
 namespace PPZ\Bank\Modelo\Conta;
 
-class Conta
+abstract class Conta
 {
 	private Titular $titular;
-	private float $saldo;
+	protected float $saldo;
 	private static int $numeroDeContas = 0;
 	
 	public function __construct(Titular $titular)
@@ -23,6 +23,8 @@ class Conta
 
 	public function saca(float $valor): void
 	{
+		$tarifa = $valor * $this->tarifaSaque();
+		$valor += $tarifa;
 		if ($valor > $this->saldo) {
 			echo 'Saldo insuficiente';
 		} else {
@@ -41,16 +43,6 @@ class Conta
 		  
 	}
 
-	public function transfere(float $valor, Conta $contaDestino): void
-	{
-		if ($valor > $this->saldo) {
-			echo 'Saldo insuficiente';
-		} else {
-			$this->saldo -= $valor;
-			$contaDestino->saldo += $valor;
-		}
-	}
-
 	public function Titular(): Titular
 	{
 		return $this->titular;
@@ -62,6 +54,8 @@ class Conta
 		
 		return $mensagem;
 	}
+
+	abstract protected function tarifaSaque():float;
 
 	public static function getNumeroDeContas(): string
 	{

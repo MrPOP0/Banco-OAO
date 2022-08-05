@@ -2,10 +2,7 @@
 
 namespace PPZ\Bank\Modelo\Conta;
 
-use PPZ\Bank\Modelo\Pessoa;
-use PPZ\Bank\Modelo\CPF;
-use PPZ\Bank\Modelo\Endereco;
-
+use PPZ\Bank\Modelo\{Pessoa, CPF, Endereco};
 
 class Titular extends Pessoa
 {

@@ -2,6 +2,8 @@
 
 namespace PPZ\Bank\Modelo;
 
+use PPZ\Bank\Modelo\{Pessoa, CPF};
+
 class Funcionario extends Pessoa
 {
     private string $cargo;
@@ -21,5 +23,7 @@ class Funcionario extends Pessoa
     {   
         $this->validaNome($nome);
         $this->nome = $nome;
+
+        echo "Seu nome foi alterado para $nome" . PHP_EOL;
     }
 }
