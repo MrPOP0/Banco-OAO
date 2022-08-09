@@ -9,14 +9,23 @@ use PPZ\Bank\Modelo\{CPF, Endereco};
 //Criação de contas
 
 //Corrente
-$julio = new Titular('Júlio César', new CPF('123.456.789-10'), new Endereco('Água Branca', 'Centro', 'Rua Barão', '27'));
+$julio = new Titular(
+        'Júlio César', 
+        new CPF('123.456.789-10'), 
+        new Endereco('Água Branca', 'Centro', 'Rua Barão', '27'));
 $conta1 = new ContaCorrente($julio);
 
-$ulisses = new Titular('José Ulisses', new CPF('109.876.543-21'), new Endereco('Delmiro', 'El Dourado', 'Rua Soldado Jose', '49'));
+$ulisses = new Titular(
+        'José Ulisses', 
+        new CPF('109.876.543-21'), 
+        new Endereco('Delmiro', 'El Dourado', 'Rua Soldado Jose', '49'));
 $conta2 = new ContaCorrente($ulisses);
 
 //Poupança
-$jane = new Titular('Jane Cleide', new CPF('852.456.127-46'), new Endereco('Inhapi', 'Bairro Novo', 'Rua São Bento', '75'));
+$jane = new Titular(
+        'Jane Cleide', 
+        new CPF('852.456.127-46'), 
+        new Endereco('Inhapi', 'Bairro Novo', 'Rua São Bento', '75'));
 $conta3 = new ContaPoupanca($jane);
 
 //Operações
