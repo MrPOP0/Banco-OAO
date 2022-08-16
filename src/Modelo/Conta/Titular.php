@@ -3,8 +3,9 @@
 namespace PPZ\Bank\Modelo\Conta;
 
 use PPZ\Bank\Modelo\{Pessoa, CPF, Endereco};
+use PPZ\Bank\Modelo\Autenticavel;
 
-class Titular extends Pessoa
+class Titular extends Pessoa implements Autenticavel
 {
     private Endereco $endereco;
 
@@ -30,4 +31,8 @@ class Titular extends Pessoa
         return $dados;
     }
 
+    public function podeAutenticar(string $senha): bool
+    {
+        return $senha === 'abcd';
+    }
 }
