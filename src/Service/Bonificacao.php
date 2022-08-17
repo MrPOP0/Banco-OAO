@@ -4,7 +4,7 @@ namespace PPZ\Bank\Service;
 
 use PPZ\Bank\Modelo\Funcionario\Funcionario;
 
-class Bonificacao
+final class Bonificacao
 {
     private float $totalBonificacao = 0;
 

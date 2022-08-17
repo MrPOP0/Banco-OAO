@@ -2,7 +2,7 @@
 
 namespace PPZ\Bank\Modelo;
 
-class CPF
+final class CPF
 {
     private string $cpf;
 

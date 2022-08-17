@@ -23,7 +23,7 @@ abstract class Pessoa
 		return $this->cpf;
 	}
 
-    protected function validaNome($nome)
+    final protected function validaNome($nome)
     {
         if (strlen(trim($nome)) > 5) {
             $this->nome = $nome;

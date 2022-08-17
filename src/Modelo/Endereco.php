@@ -2,7 +2,7 @@
 
 namespace PPZ\Bank\Modelo;
 
-class Endereco
+final class Endereco
 {
     private string $cidade;
     private string $bairro;
@@ -39,10 +39,8 @@ class Endereco
 
     public function getEndereco(): string
     {
-        $mensagem = "$this->cidade, $this->bairro, $this->rua, $this->numero";
-        return $mensagem;
+        return "$this->cidade, $this->bairro, $this->rua, $this->numero";
     }
-
 
 }
 
